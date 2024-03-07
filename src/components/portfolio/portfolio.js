@@ -21,27 +21,27 @@ const Portfolio = () => {
       </div>
       <ul className={list ? "open" : ""} onClick={toggleclose}>
         <li>
-          <NavLink className="navigate" to="">
+          <NavLink className="navigate" to="my-portfolio/">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink className="navigate" to="about">
+          <NavLink className="navigate" to="my-portfolio/about">
             About
           </NavLink>
         </li>
         <li>
-          <NavLink className="navigate" to="education">
+          <NavLink className="navigate" to="my-portfolio/education">
             Education
           </NavLink>
         </li>
         <li>
-          <NavLink className="navigate" to="service">
+          <NavLink className="navigate" to="my-portfolio/service">
             Service
           </NavLink>
         </li>
         <li>
-          <NavLink className="navigate" to="/contact">
+          <NavLink className="navigate" to="my-portfolio/contact">
             Contact Me
           </NavLink>
         </li>
