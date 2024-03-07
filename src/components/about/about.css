@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+.about-container {
+  width: 92%;
+  display: flex;
+  margin-left: 50px;
+  margin-top: 40px;
+  padding: 10px;
+  gap: 60px;
+  border-radius: 5px;
+  position: relative;
+  z-index: -1;
+}
+
+@media screen and (max-width: 992px) {
+  .about-container {
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    box-shadow: none;
+    margin-top: 20px;
+  }
+}
+.profile {
+  width: 45%;
+  padding: 20px;
+  animation: fadeInDown 2s ease;
+  margin-bottom: 20px;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width:768px) {
+  .profile {
+    width:100%;
+    padding:10px
+  }
+  .about-container {
+    padding: 3px;
+  }
+}
+
+.pic img {
+  width:80%;
+  height:80%;
+  border-radius: 60%;
+  box-shadow: 0 0.1rem 1rem 0 rgba(23, 23, 23, 0.3);
+}
+.inner-element {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.inner-details {
+  display: block;
+  padding: 5px;
+}
+
+.details {
+  margin: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width:768px) {
+  .pic img {
+    width:80%;
+    height: 80%;
+    margin-left:10px;
+  }
+  .inner-element {
+    width:100%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+  }
+} 
+/* progress bar */
+
+.javascript,
+.react {
+  animation: forjavascript 0.4s ease-in-out forwards;
+}
+@keyframes forjavascript {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* about me */
+.about-me {
+  width: 50%;
+  padding: 10px;
+  animation: fadeInRight 500ms ease forwards;
+}
+
+.about-me p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.about-title {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 992px) {
+  .about-me {
+    width: 100%;
+  }
+}
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  right: 30px;
+  bottom: 10px;
+  gap: 30px;
+}
+.social-icons svg {
+  color: rgb(250, 249, 249);
+}
+
+.footer {
+  background-color: #232f3e;
+  width: 100%;
+  margin-top: 5rem;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 40px;
+}
+.footer h3 {
+  color: white;
+}
+.text {
+  display: none;
+}
+.instagram:hover .text,
+.linkedin:hover .text,
+.facebook:hover .text,
+.github:hover .text {
+  display: inline;
+  position: absolute;
+  top: 3.7rem;
+  color: white;
+  font-size: 17px;
+}
