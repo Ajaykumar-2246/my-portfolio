@@ -11,20 +11,20 @@ import Notfound from "./components/pagenotfound/notfound";
 import Portfolio from "./components/portfolio/portfolio";
 import Service from "./components/servicespage/service";
 
-
 function App() {
   return (
     <div className="App">
-      <Portfolio>
+      <Portfolio />
       <Routes>
-        <Route path="" Component={Home}/>
-        <Route path="about" Component={About} />
-        <Route path="education" Component={Education} />
-        <Route path="service" Component={Service} />
-        <Route path="contact" Component={Contact} />
+        <Route path="my-portfolio">
+          <Route path="" Component={Home} />
+          <Route path="about" Component={About}/>
+          <Route path="education" Component={Education} />
+          <Route path="service" Component={Service} />
+          <Route path="contact" Component={Contact} />
+        </Route>
         <Route path="*" Component={Notfound} />
       </Routes>
-      </Portfolio>
     </div>
   );
 }
