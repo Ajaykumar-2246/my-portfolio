@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./service.css";
 
 const Service = () => {
+  let navigate = useNavigate();
+  let navigatecontact = () => {
+    navigate("../contact");
+  };
   return (
     <div className="service-page">
       <div className="content">
@@ -28,8 +33,14 @@ const Service = () => {
         </p>
         <p>
           If you want to contact you can contact using my number,and the number
-          is in About me page ,are u can contact using Contact Me page,I will create Dynamic web page
+          is in About me page ,are u can contact using Contact Me page,I will
+          create Dynamic web page
         </p>
+        <div className="contact-button">
+        <button onClick={navigatecontact} className="contact-btn">
+          Contact Me
+        </button>
+        </div>
       </div>
     </div>
   );

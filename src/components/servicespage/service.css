@@ -45,3 +45,24 @@
     text-align: center;
     padding: 20px;
 }
+.navigation-contact{
+    display: flex;
+    justify-content:center;
+    padding:10px;
+}
+
+.contact-btn{
+    color:white;
+    padding: 10px;
+    background-color: blue;
+    width:17%;
+    text-align: center;
+    border-radius: 5px;
+    border-color: blue;
+    cursor: pointer;
+}
+.contact-button{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}

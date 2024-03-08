@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./portfolio.css";
 
@@ -10,6 +10,7 @@ const Portfolio = () => {
     {
       to:"my-portfolio/",
       label:"Home",
+      
     },
     {
       to:"my-portfolio/about",
@@ -46,7 +47,7 @@ const Portfolio = () => {
         {
           data.map((item,index)=>(
             <li key={index}>
-              <NavLink className="navigate" to={item.to}>{item.label}</NavLink>
+              <Link className="navigate" to={item.to}>{item.label}</Link>
             </li>
           ))
         }
