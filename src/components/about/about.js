@@ -24,7 +24,7 @@ const About = () => {
                 <span>Full Stack Development</span>
               </span>
               <span className="inner-details">
-                <b> Email:</b>
+                <b>Email:</b>
                 <span>ajaybilla2004@gmail.com</span>
               </span>
               <span className="inner-details">

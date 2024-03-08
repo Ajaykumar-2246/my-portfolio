@@ -6,6 +6,29 @@ import "./portfolio.css";
 const Portfolio = () => {
   let [list, setList] = useState(false);
 
+  let data  =[
+    {
+      to:"my-portfolio/",
+      label:"Home",
+    },
+    {
+      to:"my-portfolio/about",
+      label:"About",
+    },
+    {
+      to:"my-portfolio/education",
+      label:"Education",
+    },
+    {
+      to:"my-portfolio/service",
+      label:"Service",
+    },
+    {
+      to:"my-portfolio/contact",
+      label:"Contact Me",
+    }
+  ]
+
   let toggleclose = () => {
     setList(false);
   };
@@ -20,31 +43,13 @@ const Portfolio = () => {
         <span className="menu-item"></span>
       </div>
       <ul className={list ? "open" : ""} onClick={toggleclose}>
-        <li>
-          <NavLink className="navigate" to="my-portfolio/">
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navigate" to="my-portfolio/about">
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navigate" to="my-portfolio/education">
-            Education
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navigate" to="my-portfolio/service">
-            Service
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navigate" to="my-portfolio/contact">
-            Contact Me
-          </NavLink>
-        </li>
+        {
+          data.map((item,index)=>(
+            <li key={index}>
+              <NavLink className="navigate" to={item.to}>{item.label}</NavLink>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   );
