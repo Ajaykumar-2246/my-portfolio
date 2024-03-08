@@ -7,6 +7,24 @@ import profileimage from "./download.jpg";
 import Aboutfooter from "./aboutfooter";
 
 const About = () => {
+  let data = [
+    {
+      field: "Name:",
+      value: "Billa Ajay Kumar",
+    },
+    {
+      field:"Profile:",
+      value:"Full Stack Developer"
+    },
+    {
+      field:"Email:",
+      value:"ajaybilla2004@gmail.com"
+    },
+    {
+      field:"Phone:",
+      value:"(+91)9666490245"
+    }
+  ];
   return (
     <React.Fragment>
       <div className="about-container">
@@ -16,21 +34,11 @@ const About = () => {
               <img src={profileimage} alt="Profile..." />
             </div>
             <div className="details">
-              <span className="inner-details">
-                <b> Name:</b> <span>Billa Ajay Kumar</span>
-              </span>
-              <span className="inner-details">
-                <b>Profile: </b>
-                <span>Full Stack Development</span>
-              </span>
-              <span className="inner-details">
-                <b>Email:</b>
-                <span>ajaybilla2004@gmail.com</span>
-              </span>
-              <span className="inner-details">
-                <b>phone:</b>
-                <span>(+91)9666490245</span>
-              </span>
+              {data.map((item, index) => (
+                <span className="inner-details"key={index} >
+                  <b>{item.field}</b><span>{item.value}</span>
+                </span>
+              ))}
             </div>
           </div>
           <h3>Skills</h3>

@@ -10,6 +10,7 @@
   display: flex;
   gap: 30px;
 }
+
 @media screen and (max-width: 768px) {
   .education {
     flex-wrap: wrap;
@@ -67,6 +68,11 @@
 
 .education-item span {
   font-weight: bold;
+  padding-right:10px;
+}
+
+.education-item ol li{
+  margin-left: 10px;
 }
 .experience {
   width: 50%;
@@ -76,6 +82,10 @@
   box-shadow: 0 0 0.1rem 0.09rem rgba(0, 0, 0, 0.075);
 }
 @media screen and (max-width: 786px) {
+  .education-item ol li{
+    margin-left: 20px;
+    padding-top:5px;
+  }
   .experience {
     width: 100%;
   }
@@ -89,4 +99,5 @@
 }
 .experience li {
   margin-left: 20px;
+  padding-top:5px;
 }

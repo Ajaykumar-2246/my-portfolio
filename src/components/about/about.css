@@ -43,7 +43,7 @@
 @media screen and (max-width:768px) {
   .profile {
     width:100%;
-    padding:10px
+    padding:5px;
   }
   .about-container {
     padding: 3px;
@@ -60,7 +60,7 @@
 .inner-element {
   width: 100%;
   display: flex;
-  gap: 30px;
+  gap:20px;
 }
 
 .inner-details {
@@ -69,21 +69,29 @@
 }
 
 .details {
-  margin: 20px;
+  margin:10px;
   width: 100%;
+}
+.inner-details b{
+  color:rgba(58, 71, 84, 1);
+
+  font-weight: bold;
 }
 
 @media screen and (max-width:768px) {
   .pic img {
-    width:80%;
+    width:50%;
     height: 80%;
-    margin-left:10px;
+    margin-left:30px !important;
     object-fit: cover;
   }
   .inner-element {
     width:100%;
     flex-wrap: wrap;
-    margin-left: 10px;
+    margin-left:5px;
+  }
+  .details{
+    margin-left:0px;
   }
 } 
 /* progress bar */
