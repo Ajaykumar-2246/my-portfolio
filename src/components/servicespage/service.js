@@ -37,7 +37,7 @@ const Service = () => {
           create Dynamic web page
         </p>
         <div className="contact-button">
-        <button onClick={navigatecontact} className="contact-btn">
+        <button onClick={navigatecontact} className="btn btn-primary contact-btn">
           Contact Me
         </button>
         </div>

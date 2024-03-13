@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { loginAction } from "../reduxtool/action";
+
 function Login() {
   let [username, setUserName] = useState("");
   let [password, setPassword] = useState("");
   let [usererror, setUserError] = useState("");
   let [passworderror, setPasswordError] = useState("");
+  let loggedIn = useSelector((state) => state.counter.loggedIn);
   let navigate = useNavigate();
+  let dispatch = useDispatch();
+
   const nameEnter = (event) => {
     setUserName(event.target.value);
   };
@@ -14,26 +20,37 @@ function Login() {
   const passwordEnter = (event) => {
     setPassword(event.target.value);
   };
+
   const submit = (event) => {
     event.preventDefault();
     if (username && password) {
-      localStorage.setItem("userLoggedIn", true);
-      navigate("../effecthook");
+      dispatch(
+        loginAction({
+          name: username,
+          password: password,
+        })
+      );
       return;
     }
+
     if (!username) {
       setUserError("Please enter username");
     } else {
       setUserError("");
-      setUserName("");
     }
+
     if (!password) {
       setPasswordError("Please enter password");
     } else {
       setPasswordError("");
-      setPassword("");
     }
   };
+
+  useEffect(() => {
+    if (loggedIn) {
+      navigate("/");
+    }
+  }, [loggedIn,navigate]);
 
   return (
     <div className="login">

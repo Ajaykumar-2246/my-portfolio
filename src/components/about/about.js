@@ -13,17 +13,17 @@ const About = () => {
       value: "Billa Ajay Kumar",
     },
     {
-      field:"Profile:",
-      value:"Full Stack Developer"
+      field: "Profile:",
+      value: "Full Stack Developer",
     },
     {
-      field:"Email:",
-      value:"ajaybilla2004@gmail.com"
+      field: "Email:",
+      value: "ajaybilla2004@gmail.com",
     },
     {
-      field:"Phone:",
-      value:"(+91)9666490245"
-    }
+      field: "Phone:",
+      value: "(+91)9666490245",
+    },
   ];
   return (
     <React.Fragment>
@@ -35,8 +35,9 @@ const About = () => {
             </div>
             <div className="details">
               {data.map((item, index) => (
-                <span className="inner-details"key={index} >
-                  <b>{item.field}</b><span>{item.value}</span>
+                <span className="inner-details" key={index}>
+                  <b>{item.field}</b>
+                  <span>{item.value}</span>
                 </span>
               ))}
             </div>

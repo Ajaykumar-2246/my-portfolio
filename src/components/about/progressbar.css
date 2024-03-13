@@ -18,7 +18,7 @@
 .progressbar-fill {
   height: 100%;
   border-radius: 10px;
-  background-color:rgba(58, 71, 84, 1);
+  background-color: rgba(58, 71, 84, 1);
   animation: progress 0.4s ease-in-out forwards;
 }
 

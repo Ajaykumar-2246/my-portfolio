@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
-  count: 100
+  count: 100,
+  userget: [],
+  loggedIn: false,
 };
 
 const counterSlice = createSlice({
@@ -16,8 +17,17 @@ const counterSlice = createSlice({
     decrement(state, action) {
       state.count--;
     },
+
     incrementByN(state, action) {
-      state.count += action.payload.data;
+      state.count += action.payload;
+    },
+
+    userData(state, action) {
+      state.userget = [...action.payload.data];
+    },
+
+    logUser(state, action) {
+      state.loggedIn = action.payload;
     },
   },
 });
