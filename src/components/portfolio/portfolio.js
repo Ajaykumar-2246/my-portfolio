@@ -8,7 +8,7 @@ const Portfolio = () => {
 
   let data  =[
     {
-      to:"my-portfolio/",
+      to:"my-portfolio",
       label:"Home",
       
     },
