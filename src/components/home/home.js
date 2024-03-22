@@ -22,8 +22,8 @@ const Home = () => {
           with user friendly websites
         </p>
         <div className="button">
-          <button className="btnt hire">Hire Me</button>
-          <button onClick={navigateabout} className="btnt about-btn">
+          <button className="btn hire">Hire Me</button>
+          <button onClick={navigateabout} className="btn about-btn">
             About Me
           </button>
         </div>
